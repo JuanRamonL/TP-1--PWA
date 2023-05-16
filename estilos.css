@@ -127,48 +127,12 @@ h2{
     font-size: 1.5rem;
 }
 
-.secundario.viento{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    font-size: 16px;
 
-}
 .date{
     padding: 1px;
     font-weight: bolder;
     color: whitesmoke;
 }
-
-.contenedor.noche .descripcion{
-    color: whitesmoke;
-}
-.contenedor.noche .ciudad{
-    color: whitesmoke;
-}
-
-
-
-.contenedor.dia .ciudad{
-    color: black;
-}
-.contenedor.dia .descripcion{
-    color: black;
-}
-.contenedor.dia .date{
-    color: black;
-}
-.contenedor.dia .date{
-    color: black;
-}
-.contenedor.dia .date{
-    color: black;
-}
-.contenedor.dia .date{
-    color: black;
-}
-
-
 
 .climainfo{
     flex: .1;
@@ -188,9 +152,7 @@ h2{
     color: whitesmoke;
     padding: 15px 5px;
 }
-.clima p{
-    color: whitesmoke;
-}
+
 #min{
     color: #8ECAE6;
 }
@@ -210,14 +172,15 @@ h2{
 .viento{
     display: grid;
     justify-content: center;
-    font-weight: bolder;
-    font-size: 1.5rem;
 }
 
-.datosViento{
+.secundario.viento{
     display: flex;
-    justify-content: space-around;
-    
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1.3rem;
+    font-weight: normal;
+
 }
 
 small{
