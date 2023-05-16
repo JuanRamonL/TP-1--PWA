@@ -1,0 +1,230 @@
+/*https://coolors.co/palette/8ecae6-219ebc-023047-ffb703-fb8500*/
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.contenedor{
+    width: 100%;
+    background-color: #023047;
+    height: 50rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#contenido-api{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    flex: 0.4;
+    margin: 1rem auto;
+    font-weight: bold;
+    color: whitesmoke;
+    font-size: 2rem;
+
+}
+
+#form{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+
+.container .dia{
+    background-image: url() ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: black;
+}
+
+.container .noche{
+    background-image: url() ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: whitesmoke;
+}
+
+#input-temp{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    flex: 0.4;
+    margin: 1rem auto;
+    width: 100%;
+}
+
+#search_form{
+    display: flex;
+}
+#search_search_form button{
+    visibility: hidden;
+}
+
+#buscador{
+    width: 60%;
+    padding: 0.5rem;
+    margin: 0 2%;
+    border-radius: 5rem;
+    border: 2px solid grey;
+}
+
+.buscador:focus{
+    outline: red;
+}
+
+#boton{
+    padding: 0.5rem 1rem;
+    border-radius: 5rem;
+    background-color: whitesmoke;
+    border: 2px solid grey;
+}
+
+#boton:hover{
+    background-color: whitesmoke;
+    border: 2px solid ;
+    outline: red;
+}
+
+.contenido-api{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.grados{
+    text-align: center;
+    font-weight: bolder;
+    color: whitesmoke;
+    font-size: 4rem;
+}
+
+h2{
+    color: whitesmoke;
+    font-size: 2rem;
+}
+
+.ubicacion{
+    display: block;
+    text-align: center;
+}
+
+.secundario{
+    padding: 1px 15px;
+    font-weight: bold;
+    color: whitesmoke;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.secundario.viento{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 16px;
+
+}
+.date{
+    padding: 1px;
+    font-weight: bolder;
+    color: whitesmoke;
+}
+
+.contenedor.noche .descripcion{
+    color: whitesmoke;
+}
+.contenedor.noche .ciudad{
+    color: whitesmoke;
+}
+
+
+
+.contenedor.dia .ciudad{
+    color: black;
+}
+.contenedor.dia .descripcion{
+    color: black;
+}
+.contenedor.dia .date{
+    color: black;
+}
+.contenedor.dia .date{
+    color: black;
+}
+.contenedor.dia .date{
+    color: black;
+}
+.contenedor.dia .date{
+    color: black;
+}
+
+
+
+.climainfo{
+    flex: .1;
+    margin: 5px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.clima{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 1.4rem;
+    color: whitesmoke;
+    padding: 15px 5px;
+}
+.clima p{
+    color: whitesmoke;
+}
+#min{
+    color: #8ECAE6;
+}
+
+#max{
+    color: #FB8500;
+}
+
+#grados{
+    color: #FFB703;
+}
+
+#termmica{
+    color: #219EBC;
+}
+
+.viento{
+    display: grid;
+    justify-content: center;
+    font-weight: bolder;
+    font-size: 1.5rem;
+}
+
+.datosViento{
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+small{
+    color: whitesmoke;
+}
+
+.datos-secundario{
+    display: flex;
+    justify-content: space-around;
+}
