@@ -171,7 +171,9 @@ h2{
 
 .viento{
     display: grid;
-    justify-content: center;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
 }
 
 .secundario.viento{
@@ -191,3 +193,4 @@ small{
     display: flex;
     justify-content: space-around;
 }
+
