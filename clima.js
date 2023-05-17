@@ -36,22 +36,13 @@ let $contenedor = document.getElementById("contenedor"),
 
  $sTermica = document.getElementById("termmica"),
 
- $presion = document.getElementById("presion");
+ $presion = document.getElementById("presion"),
 
-
-
-let dia = new Date;
-
-
-
-
-
-
+dia = new Date;
 
 
 
 let datosClima = function (ciudad){
-
     
 
     let $buscador = document.getElementById("buscador").value;

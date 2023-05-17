@@ -1,23 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Juan Ramon Lopez, Cátedra PWA</title>
     <link rel="icon" type="image/png" href="img/ico.png">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-    <div class="contenedor noche">
+    <div class="contenedor">
+        <nav  id="nav">
+            <!--<img src="img/ico.png" alt="logo-app" width="10%">-->
+            <input type="text" id="buscador" placeholder="buscar"> 
+            <button type="button" id="boton"> Buscar</button>
+        </nav>
 
-        <div id="input-temp">
-            <div  id="form">
-                <img src="img/ico.png" alt="logo-app" width="10%">
-                <input type="text" id="buscador" placeholder="buscar"> 
-                <button type="button" id="boton"> Buscar</button>
-            </div>
+        <div class="ubicacion">
+            <div class="secundario" id="ciudad"> /</div>
+            <div class="secundario" id="date">/</div>
+        </div>
+        
+        <div id="temperatura">
+            
 
             <div id="contenido-api">
                 <!--<h2 class="secundario">Temperatura</h2>--> 
@@ -25,67 +33,78 @@
                 <div class="weather-icon" >
                     <img src="" alt="" id="weather-icon">
                 </div>
+
                 <div class="descripcion" id="descripcion">/</div>
 
-                <h3>Sensación térmica</h3>
+                <h2>Sensación térmica</h2>
                 <p><span  id="termmica">/ °C</span></p>
-                
-            </div>
 
-            <div class="ubicacion">
-                <div class="secundario" id="ciudad"> /</div>
-                <div class="secundario" id="date">/</div>
+
+                <!--Datos temperatura minima, maxima y actual-->
+                <div class="climainfo">
+                
+                    <div class="clima">
+                        <small>Min </small>
+                        <span class="min" id="min"> /°C</span>
+                    </div>
+        
+                    <div class="clima">
+                        <small>Temperatura </small>
+                        <span  class="medio" id="grados">/°C</span>
+                    </div>
+        
+                    <div class="clima">
+                        <small>Max </small>
+                        <span class="max" id="max"> /°C</span>
+                    </div>
+                </div>
+
+                <div class="datos-secundario">
+    
+                    <div class="viento">
+                        <h3 class="secundario">Viento</h3>
+                        <div> <span id="speed"> / km/h</span></div>
+                    </div>
+        
+        
+                    <div class="viento">
+                        <h3 class="secundario">Humedad</h3>
+                        <div><span id="Humedad"> / %</span></div>
+                    </div>
+        
+                    <div class="viento">
+                        <h3 class="secundario">Presión</h3>
+                        <div><span id="presion">/</span></div>
+                    </div>
+        
+                </div>
+
+                
+            </div>   
+
+            <div id="mapa">
+                <p>Aquí va el mapa</p>
             </div>
+            
+            
+            <!--Datos viento y humedad -->
+            
+            
         </div>
     
         
-        
-        <div class="datos-secundario">
-
-            <div class="viento">
-                <h3 class="secundario">Viento</h3>
-                <div class="secundario viento" > <span id="speed"> / km/h</span></div>
-            </div>
-
-
-            <div class="viento">
-                <h3 class="secundario">Humedad</h3>
-                <div class="secundario viento" ><p></p> <span id="Humedad"> / %</span></div>
-            </div>
-
-            <div class="viento">
-                <h3 class="secundario">Presión</h3>
-                <div class="secundario viento" ><p></p> <span id="presion">/</span></div>
-            </div>
-
-        </div>
 
 
 
         
-        <div class="climainfo">
-            
-            <div class="clima">
-                <small>Min </small>
-                <span class="min" id="min"> /°C</span>
-            </div>
-
-            <div class="clima">
-                <small>Temperatura </small>
-                <span  class="medio" id="grados">/°C</span>
-            </div>
-
-            <div class="clima">
-                <small>Max </small>
-                <span class="max" id="max"> /°C</span>
-            </div>
-        </div>
+        
         
     </div>
 
+
     <script src="clima.js"></script>
     <script src="https://kit.fontawesome.com/46b4ff7f1f.js" crossorigin="anonymous"></script>
-
+    <script src="mapa.js"></script>
 
 </body>
 </html>
