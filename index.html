@@ -23,68 +23,86 @@
             <div class="secundario" id="ciudad"> /</div>
             <div class="secundario" id="date">/</div>
         </div>
+
+
+
         
         <div id="temperatura">
             
 
             <div id="contenido-api">
-                <!--<h2 class="secundario">Temperatura</h2>--> 
                 
-                <div class="weather-icon" >
-                    <img src="" alt="" id="weather-icon">
-                </div>
-
-                <div class="descripcion" id="descripcion">/</div>
-
-                <h2>Sensación térmica</h2>
-                <p><span  id="termmica">/ °C</span></p>
-
-
-                <!--Datos temperatura minima, maxima y actual-->
-                <div class="climainfo">
-                
-                    <div class="clima">
-                        <small>Min </small>
-                        <span class="min" id="min"> /°C</span>
+                <section>
+                    <div class="imagenYdescripcion" >
+                        <div class="descripcion" id="descripcion">/</div>
+                        <img src="" alt="" id="weather-icon" class="weather-icon">
                     </div>
-        
-                    <div class="clima">
-                        <small>Temperatura </small>
-                        <span  class="medio" id="grados">/°C</span>
-                    </div>
-        
-                    <div class="clima">
-                        <small>Max </small>
-                        <span class="max" id="max"> /°C</span>
-                    </div>
-                </div>
-
-                <div class="datos-secundario">
     
-                    <div class="viento">
-                        <h3 class="secundario">Viento</h3>
-                        <div> <span id="speed"> / km/h</span></div>
+                    
+                    <div>
+                        <h2>Sensación térmica</h2>
+                        <p><span  id="termmica">/ °C</span></p>
                     </div>
-        
-        
-                    <div class="viento">
-                        <h3 class="secundario">Humedad</h3>
-                        <div><span id="Humedad"> / %</span></div>
-                    </div>
-        
-                    <div class="viento">
-                        <h3 class="secundario">Presión</h3>
-                        <div><span id="presion">/</span></div>
-                    </div>
-        
-                </div>
+                </section>
+                    
 
+                <section class="datosclima">
+                        <!--Datos temperatura minima, maxima y actual-->
+                    <div  class="">
+                        <h3 class="temperatura">Temperatura</h3>
+                    
+                        <div class="datos-secundario">
+                        
+                            <div class="clima">
+                                <small>Min </small>
+                                <span class="min" id="min"> /°C</span>
+                            </div>
                 
+                            <div class="clima">
+                                <small>actual </small>
+                                <span  class="medio" id="grados">/°C</span>
+                            </div>
+                
+                            <div class="clima">
+                                <small>Max </small>
+                                <span class="max" id="max"> /°C</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="datosclima">
+                        <h3 class="temperatura">Otros datos</h3>
+
+                        <div class="datos-secundario">
+        
+                            <div class="clima">
+                                <h3 class="secundario">Viento</h3>
+                                <div> <span id="speed"> / km/h</span></div>
+                            </div>
+                
+                
+                            <div class="clima">
+                                <h3 class="secundario">Humedad</h3>
+                                <div><span id="Humedad"> / %</span></div>
+                            </div>
+                
+                            <div class="clima">
+                                <h3 class="secundario">Presión</h3>
+                                <div><span id="presion">/</span></div>
+                            </div>
+
+                        </div>
+            
+                    </div>
+                </section>
+                
+
+                <section id="mapa">
+                    <p>Aquí va el mapa</p>
+                </section>
             </div>   
 
-            <div id="mapa">
-                <p>Aquí va el mapa</p>
-            </div>
+            
             
             
             <!--Datos viento y humedad -->
