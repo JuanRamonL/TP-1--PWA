@@ -85,6 +85,7 @@ let datosClima = function (ciudad){
         console.log(json);
         console.log(json.weather[0].description)
         //$descripcion.textContent= json */
+        console.log(json);
     })
 };
 
@@ -109,9 +110,9 @@ document.addEventListener("DOMContentLoaded", (e)=>{
 
         datosClima(datosciudad);
     }
-    
-    
+
 })
+
 
 
 
