@@ -1,2 +1,3 @@
-# TP 1- PWA
- Aplicacion clima 
+# app clima
+ ● Juan Ramon Lopez DWN3B
+ ●	Camino B - Mostrar Mapa
