@@ -101,9 +101,8 @@
                 </section>
                 
 
-                <section id="mapa">
-                    <p>Aquí va el mapa</p>
-                </section>
+                <div id="map">
+                </div>
             </div>   
 
             
@@ -126,7 +125,10 @@
 
     <script src="clima.js"></script>
     <script src="https://kit.fontawesome.com/46b4ff7f1f.js" crossorigin="anonymous"></script>
-    <script src="mapa.js"></script>
+
+    <script async
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDOhmuWdZcNtA1AA_kMyRlJV6_RiJombVI&callback=initMap">
+    </script>
 
 </body>
 </html>

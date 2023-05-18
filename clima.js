@@ -38,81 +38,80 @@ let $contenedor = document.getElementById("contenedor"),
 
  $presion = document.getElementById("presion"),
 
+ latitudMaps = -12.1167,
+ longitudMaps = -77.05;
+
+ console.log(latitudMaps, longitudMaps)
+
 dia = new Date;
 
 
-
 let datosClima = function (ciudad){
-    
-
     let $buscador = document.getElementById("buscador").value;
-
+  
     // Local storage
     if((localStorage.getItem('ciudad')) == null){
-        localStorage.setItem('ciudad', $buscador);
+      localStorage.setItem('ciudad', $buscador);
     }
     else if(ciudad != null){
-        $buscador = localStorage.getItem('ciudad')
+      $buscador = localStorage.getItem('ciudad')
     }
     else{
-        localStorage.setItem('ciudad', $buscador);
+      localStorage.setItem('ciudad', $buscador);
     }
-
-
+  
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${$buscador}&appid=${apiKey}&units=metric&lang=sp`)
-        .then(res => res.json())
-        .then(json => {
-            
+      .then(res => res.json())
+      .then(json => {
         $grados.textContent= json.main.temp + "°C";
         $min.textContent= " " +json.main.temp_min + "°C";
         $max.textContent= " " +json.main.temp_max + "°C";
         $descripcion.textContent= json.weather[0].description;
         $ciudad.textContent= json.name;
-        $dato.textContent = [dia.getDate(), dia.getMonth() +1, dia.getFullYear()].join('/')
+        $dato.textContent = [dia.getDate(), dia.getMonth() +1, dia.getFullYear()].join('/');
         $viento.textContent= json.wind.speed + " km/h";
-        /*$rafaga.textContent= json.wind.gust + " m/s";
-        $degradacion.textContent= json.wind.deg + " m/s";*/
         $humedad.textContent= json.main.humidity + "%";
-        $sTermica.textContent= json.main.feels_like +"°C"
+        $sTermica.textContent= json.main.feels_like +"°C";
         $presion.textContent= json.main.pressure;
-        
-
-        $icono.src = `https://openweathermap.org/img/wn/${json.weather[0].icon}@2x.png`
-
-
-
-        /*console.log($icono)
-        console.log(json);
-        console.log(json.weather[0].description)
-        //$descripcion.textContent= json */
-        console.log(json);
-    })
-};
-
-
-$boton.addEventListener("click", e =>{
-    /*if((localStorage.getItem('ciudad')) !== null){
-        let ciudad = localStorage.getItem('ciudad');
-        console.log("Funcion que realice la peticion con lo que saque del local storage")
-        
-    } else{
-        console.log("Funcion para pintar el buscadr en blanco")
-    }
-    */
+        latitud = json.coord.lat;
+        longitud = json.coord.lon;
+  
+        latitudMaps = latitud;
+        longitudMaps = longitud;
+  
+        $icono.src = `https://openweathermap.org/img/wn/${json.weather[0].icon}@2x.png`;
+  
+        console.log(latitudMaps, longitudMaps, "nuevos datos");
+  
+        // Llamar a initMap después de que se hayan obtenido los datos de clima
+        initMap();
+      });
+  };
+  
+  $boton.addEventListener("click", e => {
     datosClima();
-
-    
-});
-
-document.addEventListener("DOMContentLoaded", (e)=>{
-    if((localStorage.getItem('ciudad')) !== null){
-        let datosciudad = localStorage.getItem('ciudad');
-
-        datosClima(datosciudad);
+  });
+  
+  document.addEventListener("DOMContentLoaded", (e) => {
+    if((localStorage.getItem('ciudad')) !== null) {
+      let datosciudad = localStorage.getItem('ciudad');
+      datosClima(datosciudad);
     }
-
-})
-
+  });
+  
+  let map;
+  
+  function initMap() {
+    map = new google.maps.Map(document.getElementById("map"), {
+      center: { lat: latitudMaps, lng: longitudMaps },
+      zoom: 15,
+    });
+    console.log(latitudMaps, longitudMaps, "dentro de maps");
+  }
+  
+  if (document.getElementById("map")) {
+    window.initMap = initMap;
+  }
 
 
 
