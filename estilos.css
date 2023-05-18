@@ -453,6 +453,7 @@
     .datosclima{
         border-radius: 2rem;
         height: 25rem;
+        width: auto;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
