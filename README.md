@@ -1,3 +1,2 @@
 # app clima
- ● Juan Ramon Lopez DWN3B
- ●	Camino B - Mostrar Mapa
+ Juan Ramon Lopez DWN3B, Camino B - Mostrar Mapa
